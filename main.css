@@ -5,6 +5,12 @@
 body {
     font-family: sans-serif;
     margin: 0;
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 60px auto 60px;
+    grid-template-areas: "hd hd"
+                         "sidebar main"
+                         "footer footer";
 }
 
 header,
@@ -17,20 +23,36 @@ footer {
 
 header {
     background: #521751;
+    grid-area: hd;
 }
 
 aside {
     background: #fa923f;
+    grid-area: sidebar;
+}
+
+main {
+    grid-area: main;
 }
 
 footer {
     background: black;
+    grid-area: footer;
 }
 
 .navigation-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navigation-item {
+    margin: 0 10px;
 }
 
 .navigation-item a {
