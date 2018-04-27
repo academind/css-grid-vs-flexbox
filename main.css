@@ -11,6 +11,7 @@ body {
     grid-template-areas: "hd hd"
                          "sidebar main"
                          "footer footer";
+    height: 100vh;
 }
 
 header,
